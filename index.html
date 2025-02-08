@@ -20,22 +20,22 @@
         body {
             background: url('background.png') no-repeat center center fixed; /* Background fixado */
             background-size: cover;
-            text-align: center;
-            font-family: 'Outfit', sans-serif;
             color: white;
+            font-family: 'Outfit', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             justify-content: flex-start;
+            align-items: center; /* Centraliza tudo na tela */
         }
 
         .container {
             margin-top: 10%;
-            width: 90%;
-            max-width: 600px;
             text-align: center;
+            max-width: 600px;
+            width: 90%;
         }
 
         .logo {
@@ -53,7 +53,7 @@
             font-size: 22px;
             border-radius: 8px;
             font-family: 'Outfit', sans-serif;
-            width: auto; /* Tamanho original */
+            width: auto;
             max-width: 500px;
             box-sizing: border-box;
         }
@@ -73,11 +73,15 @@
 
         .footer {
             margin-top: 30px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .support-button {
             margin-top: 20px;
-            background-color: #82ec68; /* Cor diferente */
+            background-color: #82ec68;
             color: white;
             font-family: 'Outfit', sans-serif;
             text-align: center;
@@ -86,7 +90,7 @@
             text-decoration: none;
             font-size: 16px;
             display: inline-block;
-            width: auto; /* Tamanho igual ao botão "Acessar Servidor" */
+            width: auto;
             max-width: 500px;
             box-sizing: border-box;
             margin-bottom: 30px;
