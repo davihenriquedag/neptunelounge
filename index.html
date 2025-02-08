@@ -142,14 +142,24 @@
             .botao {
                 font-size: 18px;
                 padding: 12px 24px;
-                width: 90%; /* Ajusta a largura do botão no celular */
-                max-width: none; /* Remove o limite de largura para celulares */
+                width: auto;
+                max-width: 500px;
             }
 
             .support-button {
-                width: 90%; /* Ajusta o botão de apoio para ter o mesmo tamanho */
-                max-width: none; /* Remove o limite de largura para celulares */
-                margin: 20px auto;
+                margin-top: 20px;
+                padding: 15px 30px;
+                background-color: #82ec68; /* Cor verde */
+                color: white;
+                font-family: 'Outfit', sans-serif;
+                text-align: center;
+                border-radius: 8px;
+                text-decoration: none;
+                font-size: 22px;
+                display: inline-block;
+                width: auto;
+                max-width: 500px; /* Garante que os botões tenham o mesmo tamanho */
+                box-sizing: border-box;
             }
 
             ul li {
@@ -172,7 +182,7 @@
         </div>
         <a href="https://discord.gg/HSKRmw3EXx" class="botao" target="_blank">Acessar Servidor</a>
         
-        <!-- Botão de Apoiar Servidor agora com o mesmo tamanho -->
+        <!-- Botão de Apoiar Servidor com o mesmo tamanho do botão de Acessar Servidor -->
         <a href="https://discords.com/servers/1328542912283148340/upvote" class="support-button" target="_blank">Apoiar Servidor</a>
     </div>
 
