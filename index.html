@@ -37,12 +37,12 @@
             background-color: #82ec68;
             color: white;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px; /* Reduzido */
             border-radius: 10px;
             font-family: 'Outfit', sans-serif;
-            padding: 10px 20px;
+            padding: 8px 18px; /* Reduzido */
             display: inline-block;
-            max-width: 320px;
+            max-width: 300px;
             width: 75%;
             text-align: center;
         }
@@ -53,7 +53,7 @@
 
         .container {
             position: relative;
-            top: 30%; /* Ajustado para dar mais espaçamento no topo */
+            top: 25%; /* Ajustado para dar mais espaçamento no topo */
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
@@ -68,11 +68,11 @@
         .botao {
             display: inline-block;
             margin-top: 20px;
-            padding: 15px 30px;
+            padding: 12px 24px; /* Reduzido */
             background-color: #85a4ff;
             color: white;
             text-decoration: none;
-            font-size: 22px;
+            font-size: 18px; /* Reduzido */
             border-radius: 8px;
             font-family: 'Outfit', sans-serif;
         }
@@ -95,7 +95,7 @@
 
         .info-box {
             background-color: #85a4ff;
-            padding: 15px;
+            padding: 12px; /* Reduzido */
             border-radius: 15px;
             text-align: left;
             color: white;
@@ -103,32 +103,32 @@
             align-items: center;
             font-family: 'Outfit', sans-serif;
             width: 30%;
-            max-width: 320px;
+            max-width: 280px;
             margin-bottom: 20px;
         }
 
         .info-box img {
-            width: 30px;
-            height: 30px;
+            width: 25px; /* Reduzido */
+            height: 25px; /* Reduzido */
             margin-right: 10px;
         }
 
         .info-box p {
             margin: 0;
             flex: 1;
-            font-size: 14px;
+            font-size: 12px; /* Reduzido */
         }
 
         /* Responsividade para dispositivos móveis */
         @media screen and (max-width: 768px) {
             .container {
-                top: 30%;
+                top: 25%;
                 width: 90%;
             }
 
             .botao {
-                font-size: 18px;
-                padding: 12px 24px;
+                font-size: 16px; /* Reduzido */
+                padding: 10px 20px; /* Reduzido */
             }
 
             .info-container {
@@ -150,27 +150,29 @@
 
             .support-button {
                 top: 10px;
-                font-size: 16px;
-                padding: 10px 20px;
+                font-size: 14px; /* Reduzido */
+                padding: 8px 18px; /* Reduzido */
                 width: 80%;
-                max-width: 320px;
+                max-width: 300px;
             }
         }
 
         /* Para telas muito pequenas, como smartphones antigos */
         @media screen and (max-width: 480px) {
             .info-box {
-                font-size: 12px;
+                font-size: 11px; /* Reduzido */
+                padding: 10px; /* Reduzido */
+                width: 85%; /* Aumentado para dar mais espaço */
             }
 
             .botao {
-                font-size: 16px;
-                padding: 10px 20px;
+                font-size: 14px; /* Reduzido */
+                padding: 8px 18px; /* Reduzido */
             }
 
             .support-button {
-                font-size: 14px;
-                padding: 8px 15px;
+                font-size: 12px; /* Reduzido */
+                padding: 6px 12px; /* Reduzido */
             }
         }
     </style>
