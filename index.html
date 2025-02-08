@@ -15,7 +15,6 @@
             -webkit-text-size-adjust: none;
             -ms-text-size-adjust: none;
             text-size-adjust: none;
-            box-sizing: border-box;
         }
 
         body {
@@ -26,36 +25,15 @@
             color: white;
             margin: 0;
             padding: 0;
-        }
-
-        /* Botão de Apoiar no topo */
-        .support-button {
-            position: fixed; /* Alterado para 'fixed' para garantir que o botão fique no topo */
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #82ec68;
-            color: white;
-            text-decoration: none;
-            font-size: 14px; /* Reduzido */
-            border-radius: 10px;
-            font-family: 'Outfit', sans-serif;
-            padding: 8px 18px; /* Reduzido */
-            display: inline-block;
-            max-width: 300px;
-            width: 75%;
-            text-align: center;
-        }
-
-        .support-button:hover {
-            background-color: #82ec68;
+            -webkit-filter: none !important;
+            filter: none !important;
         }
 
         .container {
-            position: relative;
-            top: 25%; /* Ajustado para dar mais espaçamento no topo */
+            position: absolute;
+            top: 35%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
             width: 90%;
             max-width: 600px;
         }
@@ -68,11 +46,11 @@
         .botao {
             display: inline-block;
             margin-top: 20px;
-            padding: 12px 24px; /* Reduzido */
+            padding: 15px 30px;
             background-color: #85a4ff;
             color: white;
             text-decoration: none;
-            font-size: 18px; /* Reduzido */
+            font-size: 22px;
             border-radius: 8px;
             font-family: 'Outfit', sans-serif;
         }
@@ -81,129 +59,99 @@
             background-color: #85a4ff;
         }
 
-        .info-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            position: relative; /* Alterado de 'absolute' para 'relative' */
-            bottom: 50px;
-            flex-wrap: wrap; /* Para que os itens possam se ajustar conforme o tamanho */
-            margin: 0 auto;
-            width: 100%;
-            max-width: 1000px;
-        }
-
-        .info-box {
+        .rules-box, .support-box, .help-box {
             background-color: #85a4ff;
-            padding: 12px; /* Reduzido */
+            padding: 15px;
             border-radius: 15px;
             text-align: left;
             color: white;
             display: flex;
             align-items: center;
             font-family: 'Outfit', sans-serif;
-            width: 30%;
-            max-width: 280px;
-            margin-bottom: 20px;
+            width: 65%;
+            max-width: 320px;
+            margin: 10px auto; /* Centraliza e dá espaçamento entre as caixas */
         }
 
-        .info-box img {
-            width: 25px; /* Reduzido */
-            height: 25px; /* Reduzido */
+        .rules-box img, .support-box img, .help-box img {
+            width: 30px;
+            height: 30px;
             margin-right: 10px;
         }
 
-        .info-box p {
+        .rules-box p, .support-box p, .help-box p {
             margin: 0;
             flex: 1;
-            font-size: 12px; /* Reduzido */
+            font-size: 14px;
         }
 
-        /* Responsividade para dispositivos móveis */
+        .support-button {
+            background-color: #82ec68;
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            width: 65%;
+            max-width: 320px;
+            margin: 20px auto;
+        }
+
+        .support-button:hover {
+            background-color: #82ec68;
+        }
+
         @media screen and (max-width: 768px) {
             .container {
-                top: 25%;
+                top: 30%;
                 width: 90%;
             }
 
             .botao {
-                font-size: 16px; /* Reduzido */
-                padding: 10px 20px; /* Reduzido */
+                font-size: 18px;
+                padding: 12px 24px;
             }
 
-            .info-container {
-                flex-direction: column;
-                align-items: center;
-                bottom: 0;
-                width: 100%;
-                margin: 0 auto;
-            }
-
-            .info-box {
-                width: 80%; /* Garantir que as caixas fiquem maiores no celular */
-                max-width: 90%; /* Ajuste máximo para que não ultrapasse a tela */
+            .rules-box, .support-box, .help-box {
+                width: 90%;
+                max-width: none; /* Permite que as caixas ocupem toda a largura disponível */
+                margin: 10px auto;
                 position: relative;
-                left: 50%;
-                transform: translateX(-50%);
-                margin-bottom: 15px;
             }
 
             .support-button {
-                top: 10px;
-                font-size: 14px; /* Reduzido */
-                padding: 8px 18px; /* Reduzido */
-                width: 80%;
-                max-width: 300px;
-            }
-        }
-
-        /* Para telas muito pequenas, como smartphones antigos */
-        @media screen and (max-width: 480px) {
-            .info-box {
-                font-size: 11px; /* Reduzido */
-                padding: 10px; /* Reduzido */
-                width: 85%; /* Aumentado para dar mais espaço */
-            }
-
-            .botao {
-                font-size: 14px; /* Reduzido */
-                padding: 8px 18px; /* Reduzido */
-            }
-
-            .support-button {
-                font-size: 12px; /* Reduzido */
-                padding: 6px 12px; /* Reduzido */
+                width: 90%;
+                max-width: none;
+                margin-top: 10px;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Botão de Apoiar no Topo -->
-    <a href="https://discords.com/servers/1328542912283148340/upvote" class="support-button" target="_blank">Apoiar Servidor</a>
-
     <div class="container">
         <img src="logo.png" alt="Logo" class="logo">
         <h2>Nosso servidor no Discord é o lugar perfeito para você interagir, jogar, ouvir música e se divertir com a comunidade!</h2>
         <a href="https://discord.gg/HSKRmw3EXx" class="botao" target="_blank">Acessar Servidor</a>
     </div>
 
-    <div class="info-container">
-        <div class="info-box">
-            <img src="rules.png" alt="Regras">
-            <p>Nosso servidor possui uma lista de regras que devem ser seguidas à risca para garantir um ambiente harmonioso e respeitoso para todos. Quebrar uma delas pode resultar em punição.</p>
-        </div>
-
-        <div class="info-box">
-            <img src="support.png" alt="Suporte">
-            <p>Contamos com uma equipe dedicada e sempre atenta para garantir um ambiente seguro e agradável para todos os usuários. Estamos sempre vigiando e prontos para ajudar!</p>
-        </div>
-
-        <div class="info-box">
-            <img src="leaf.png" alt="Apoio">
-            <p>Seja um apoiador votando na nossa comunidade no site Discords.com! Ao votar, você nos ajuda a alcançar mais pessoas, trazendo alegria pra ainda mais pessoas! Tudo isso de graça!</p>
-        </div>
+    <div class="rules-box">
+        <img src="rules.png" alt="Regras">
+        <p>Nosso servidor possui uma lista de regras que devem ser seguidas à risca para garantir um ambiente harmonioso e respeitoso para todos. Quebrar uma delas pode resultar em punição.</p>
     </div>
 
+    <div class="help-box">
+        <img src="support.png" alt="Suporte">
+        <p>Contamos com uma equipe dedicada e sempre atenta para garantir um ambiente seguro e agradável para todos os usuários. Estamos sempre vigiando e prontos para ajudar!</p>
+    </div>
+
+    <div class="support-box">
+        <img src="leaf.png" alt="Apoio">
+        <p>Seja um apoiador votando na nossa comunidade no site Discords.com! Ao votar, você nos ajuda a alcançar mais pessoas, trazendo alegria pra ainda mais pessoas! Tudo isso de graça!</p>
+    </div>
+
+    <a href="https://discords.com/servers/1328542912283148340/upvote" class="support-button" target="_blank">Apoiar Servidor</a>
 </body>
 </html>
