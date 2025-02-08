@@ -30,8 +30,8 @@
 
         /* Botão de Apoiar no topo */
         .support-button {
-            position: absolute;
-            top: 20px;
+            position: fixed; /* Alterado para 'fixed' para garantir que o botão fique no topo */
+            top: 10px;
             left: 50%;
             transform: translateX(-50%);
             background-color: #82ec68;
@@ -43,7 +43,7 @@
             padding: 10px 20px;
             display: inline-block;
             max-width: 320px;
-            width: 65%;
+            width: 75%;
             text-align: center;
         }
 
@@ -52,10 +52,10 @@
         }
 
         .container {
-            position: absolute;
-            top: 40%;
+            position: relative;
+            top: 30%; /* Ajustado para dar mais espaçamento no topo */
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
             width: 90%;
             max-width: 600px;
         }
@@ -85,9 +85,12 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            position: absolute;
-            bottom: 110px;
+            position: relative; /* Alterado de 'absolute' para 'relative' */
+            bottom: 50px;
+            flex-wrap: wrap; /* Para que os itens possam se ajustar conforme o tamanho */
+            margin: 0 auto;
             width: 100%;
+            max-width: 1000px;
         }
 
         .info-box {
@@ -99,8 +102,9 @@
             display: flex;
             align-items: center;
             font-family: 'Outfit', sans-serif;
-            width: 65%;
+            width: 30%;
             max-width: 320px;
+            margin-bottom: 20px;
         }
 
         .info-box img {
@@ -118,8 +122,8 @@
         /* Responsividade para dispositivos móveis */
         @media screen and (max-width: 768px) {
             .container {
-                top: 40%;
-                width: 95%;
+                top: 30%;
+                width: 90%;
             }
 
             .botao {
@@ -130,27 +134,43 @@
             .info-container {
                 flex-direction: column;
                 align-items: center;
-                position: relative;
                 bottom: 0;
+                width: 100%;
+                margin: 0 auto;
             }
 
             .info-box {
-                width: 75%;
-                max-width: 300px;
+                width: 80%; /* Garantir que as caixas fiquem maiores no celular */
+                max-width: 90%; /* Ajuste máximo para que não ultrapasse a tela */
                 position: relative;
                 left: 50%;
                 transform: translateX(-50%);
-                margin-bottom: 10px;
-                display: block;
+                margin-bottom: 15px;
             }
 
-            /* Ajuste para o botão no topo no celular */
             .support-button {
                 top: 10px;
                 font-size: 16px;
                 padding: 10px 20px;
-                width: 75%;
-                max-width: 300px;
+                width: 80%;
+                max-width: 320px;
+            }
+        }
+
+        /* Para telas muito pequenas, como smartphones antigos */
+        @media screen and (max-width: 480px) {
+            .info-box {
+                font-size: 12px;
+            }
+
+            .botao {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .support-button {
+                font-size: 14px;
+                padding: 8px 15px;
             }
         }
     </style>
