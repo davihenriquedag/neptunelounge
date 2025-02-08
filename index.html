@@ -18,7 +18,7 @@
         }
 
         body {
-            background: url('background.png') no-repeat center center fixed;
+            background: url('background.png') no-repeat center center fixed; /* Background fixado */
             background-size: cover;
             text-align: center;
             font-family: 'Outfit', sans-serif;
@@ -28,11 +28,11 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
 
         .container {
-            margin-top: 20%;
+            margin-top: 10%;
             width: 90%;
             max-width: 600px;
             text-align: center;
@@ -53,6 +53,9 @@
             font-size: 22px;
             border-radius: 8px;
             font-family: 'Outfit', sans-serif;
+            width: auto; /* Tamanho original */
+            max-width: 500px;
+            box-sizing: border-box;
         }
 
         .botao:hover {
@@ -74,17 +77,18 @@
 
         .support-button {
             margin-top: 20px;
-            background-color: #82ec68;
+            background-color: #82ec68; /* Cor diferente */
             color: white;
             font-family: 'Outfit', sans-serif;
             text-align: center;
-            padding: 10px;
+            padding: 15px 30px;
             border-radius: 10px;
             text-decoration: none;
             font-size: 16px;
             display: inline-block;
-            width: 90%;
+            width: auto; /* Tamanho igual ao botão "Acessar Servidor" */
             max-width: 500px;
+            box-sizing: border-box;
             margin-bottom: 30px;
         }
 
@@ -162,7 +166,7 @@
         </div>
         <a href="https://discord.gg/HSKRmw3EXx" class="botao" target="_blank">Acessar Servidor</a>
         
-        <!-- Botão de Apoiar movido para baixo do botão "Acessar Servidor" -->
+        <!-- Botão de Apoiar agora com a cor diferente -->
         <a href="https://discords.com/servers/1328542912283148340/upvote" class="support-button" target="_blank">Apoiar Servidor</a>
     </div>
 
