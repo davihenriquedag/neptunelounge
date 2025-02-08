@@ -15,7 +15,6 @@
             -webkit-text-size-adjust: none;
             -ms-text-size-adjust: none;
             text-size-adjust: none;
-            box-sizing: border-box;
         }
 
         body {
@@ -26,29 +25,8 @@
             color: white;
             margin: 0;
             padding: 0;
-        }
-
-        /* Botão de Apoiar no topo */
-        .support-button {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #82ec68;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 10px;
-            font-family: 'Outfit', sans-serif;
-            padding: 10px 20px;
-            display: inline-block;
-            max-width: 320px;
-            width: 65%;
-            text-align: center;
-        }
-
-        .support-button:hover {
-            background-color: #82ec68;
+            -webkit-filter: none !important;
+            filter: none !important;
         }
 
         .container {
@@ -81,16 +59,9 @@
             background-color: #85a4ff;
         }
 
-        .info-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        .rules-box, .support-box, .help-box {
             position: absolute;
             bottom: 110px;
-            width: 100%;
-        }
-
-        .info-box {
             background-color: #85a4ff;
             padding: 15px;
             border-radius: 15px;
@@ -103,22 +74,58 @@
             max-width: 320px;
         }
 
-        .info-box img {
+        .rules-box {
+            left: 25%;
+            transform: translateX(-50%);
+        }
+
+        .help-box {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .support-box {
+            left: 75%;
+            transform: translateX(-50%);
+        }
+
+        .support-button {
+            position: absolute;
+            left: 75%;
+            bottom: 60px;
+            transform: translateX(-50%);
+            width: 65%;
+            max-width: 320px;
+            background-color: #82ec68;
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .support-button:hover {
+            background-color: #82ec68;
+        }
+
+        .rules-box img, .support-box img, .help-box img {
             width: 30px;
             height: 30px;
             margin-right: 10px;
         }
 
-        .info-box p {
+        .rules-box p, .support-box p, .help-box p {
             margin: 0;
             flex: 1;
             font-size: 14px;
         }
 
-        /* Responsividade para dispositivos móveis */
         @media screen and (max-width: 768px) {
             .container {
-                top: 40%;
+                top: 35%;
                 width: 95%;
             }
 
@@ -127,61 +134,39 @@
                 padding: 12px 24px;
             }
 
-            .info-container {
-                flex-direction: column;
-                align-items: center;
-                position: relative;
-                bottom: 0;
-            }
-
-            .info-box {
+            .rules-box, .support-box, .help-box, .support-button {
                 width: 75%;
                 max-width: 300px;
                 position: relative;
                 left: 50%;
                 transform: translateX(-50%);
                 margin-bottom: 10px;
-                display: block;
-            }
-
-            /* Ajuste para o botão no topo no celular */
-            .support-button {
-                top: 10px;
-                font-size: 16px;
-                padding: 10px 20px;
-                width: 75%;
-                max-width: 300px;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Botão de Apoiar no Topo -->
-    <a href="https://discords.com/servers/1328542912283148340/upvote" class="support-button" target="_blank">Apoiar Servidor</a>
-
     <div class="container">
         <img src="logo.png" alt="Logo" class="logo">
         <h2>Nosso servidor no Discord é o lugar perfeito para você interagir, jogar, ouvir música e se divertir com a comunidade!</h2>
         <a href="https://discord.gg/HSKRmw3EXx" class="botao" target="_blank">Acessar Servidor</a>
     </div>
 
-    <div class="info-container">
-        <div class="info-box">
-            <img src="rules.png" alt="Regras">
-            <p>Nosso servidor possui uma lista de regras que devem ser seguidas à risca para garantir um ambiente harmonioso e respeitoso para todos. Quebrar uma delas pode resultar em punição.</p>
-        </div>
-
-        <div class="info-box">
-            <img src="support.png" alt="Suporte">
-            <p>Contamos com uma equipe dedicada e sempre atenta para garantir um ambiente seguro e agradável para todos os usuários. Estamos sempre vigiando e prontos para ajudar!</p>
-        </div>
-
-        <div class="info-box">
-            <img src="leaf.png" alt="Apoio">
-            <p>Seja um apoiador votando na nossa comunidade no site Discords.com! Ao votar, você nos ajuda a alcançar mais pessoas, trazendo alegria pra ainda mais pessoas! Tudo isso de graça!</p>
-        </div>
+    <div class="rules-box">
+        <img src="rules.png" alt="Regras">
+        <p>Nosso servidor possui uma lista de regras que devem ser seguidas à risca para garantir um ambiente harmonioso e respeitoso para todos. Quebrar uma delas pode resultar em punição.</p>
     </div>
 
+    <div class="help-box">
+        <img src="support.png" alt="Suporte">
+        <p>Contamos com uma equipe dedicada e sempre atenta para garantir um ambiente seguro e agradável para todos os usuários. Estamos sempre vigiando e prontos para ajudar!</p>
+    </div>
+
+    <div class="support-box">
+        <img src="leaf.png" alt="Apoio">
+        <p>Seja um apoiador votando na nossa comunidade no site Discords.com! Ao votar, você nos ajuda a alcançar mais pessoas, trazendo alegria pra ainda mais pessoas! Tudo isso de graça!</p>
+    </div>
+
+    <a href="https://discords.com/servers/1328542912283148340/upvote" class="support-button" target="_blank">Apoiar Servidor</a>
 </body>
 </html>
