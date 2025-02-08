@@ -35,6 +35,7 @@
             margin-top: 20%;
             width: 90%;
             max-width: 600px;
+            text-align: center;
         }
 
         .logo {
@@ -56,6 +57,39 @@
 
         .botao:hover {
             background-color: #85a4ff;
+        }
+
+        .texto-principal {
+            font-size: 18px;
+            margin-top: 20px;
+            line-height: 1.6;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer {
+            margin-top: 30px;
+        }
+
+        .support-button {
+            margin-top: 20px;
+            background-color: #82ec68;
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            width: 90%;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .support-button:hover {
+            background-color: #82ec68;
         }
 
         ul {
@@ -93,25 +127,6 @@
             font-size: 14px;
         }
 
-        .support-button {
-            margin-top: 20px;
-            background-color: #82ec68;
-            color: white;
-            font-family: 'Outfit', sans-serif;
-            text-align: center;
-            padding: 10px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 16px;
-            display: inline-block;
-            width: 90%;
-            max-width: 500px;
-        }
-
-        .support-button:hover {
-            background-color: #82ec68;
-        }
-
         @media screen and (max-width: 768px) {
             .container {
                 margin-top: 15%;
@@ -131,18 +146,28 @@
                 width: 90%;
                 margin: 20px auto;
             }
+
+            .texto-principal {
+                font-size: 16px;
+                max-width: 95%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="logo.png" alt="Logo" class="logo">
-        <h2>Nosso servidor no Discord é o lugar perfeito para você interagir, jogar, ouvir música e se divertir com a comunidade!</h2>
+        <div class="texto-principal">
+            <h2>Nosso servidor no Discord é o lugar perfeito para você interagir, jogar, ouvir música e se divertir com a comunidade!</h2>
+        </div>
         <a href="https://discord.gg/HSKRmw3EXx" class="botao" target="_blank">Acessar Servidor</a>
+        
+        <!-- Botão de Apoiar movido para baixo do botão "Acessar Servidor" -->
+        <a href="https://discords.com/servers/1328542912283148340/upvote" class="support-button" target="_blank">Apoiar Servidor</a>
     </div>
 
-    <!-- Janelas e Botão de Apoiar na parte inferior -->
-    <div>
+    <!-- Janelas na parte inferior -->
+    <div class="footer">
         <ul>
             <li>
                 <img src="rules.png" alt="Regras">
@@ -157,8 +182,6 @@
                 <p>Seja um apoiador votando na nossa comunidade no site Discords.com! Ao votar, você nos ajuda a alcançar mais pessoas, trazendo alegria pra ainda mais pessoas! Tudo isso de graça!</p>
             </li>
         </ul>
-
-        <a href="https://discords.com/servers/1328542912283148340/upvote" class="support-button" target="_blank">Apoiar Servidor</a>
     </div>
 </body>
 </html>
