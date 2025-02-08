@@ -31,7 +31,7 @@
 
         .container {
             position: absolute;
-            top: 35%;
+            top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 90%;
@@ -59,33 +59,38 @@
             background-color: #85a4ff;
         }
 
-        .rules-box, .support-box, .help-box {
-            background-color: #85a4ff;
-            padding: 15px;
-            border-radius: 15px;
-            text-align: left;
-            color: white;
-            display: flex;
-            align-items: center;
-            font-family: 'Outfit', sans-serif;
-            width: 65%;
-            max-width: 320px;
-            margin: 10px auto; /* Centraliza e dá espaçamento entre as caixas */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
         }
 
-        .rules-box img, .support-box img, .help-box img {
+        li {
+            margin-bottom: 15px;
+            background-color: rgba(133, 164, 255, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        li img {
             width: 30px;
             height: 30px;
             margin-right: 10px;
         }
 
-        .rules-box p, .support-box p, .help-box p {
+        li p {
             margin: 0;
             flex: 1;
             font-size: 14px;
         }
 
         .support-button {
+            margin-top: 20px;
             background-color: #82ec68;
             color: white;
             font-family: 'Outfit', sans-serif;
@@ -95,9 +100,6 @@
             text-decoration: none;
             font-size: 16px;
             display: inline-block;
-            width: 65%;
-            max-width: 320px;
-            margin: 20px auto;
         }
 
         .support-button:hover {
@@ -106,8 +108,8 @@
 
         @media screen and (max-width: 768px) {
             .container {
-                top: 30%;
-                width: 90%;
+                top: 35%;
+                width: 95%;
             }
 
             .botao {
@@ -115,17 +117,13 @@
                 padding: 12px 24px;
             }
 
-            .rules-box, .support-box, .help-box {
+            ul li {
                 width: 90%;
-                max-width: none; /* Permite que as caixas ocupem toda a largura disponível */
                 margin: 10px auto;
-                position: relative;
             }
 
             .support-button {
                 width: 90%;
-                max-width: none;
-                margin-top: 10px;
             }
         }
     </style>
@@ -137,20 +135,20 @@
         <a href="https://discord.gg/HSKRmw3EXx" class="botao" target="_blank">Acessar Servidor</a>
     </div>
 
-    <div class="rules-box">
-        <img src="rules.png" alt="Regras">
-        <p>Nosso servidor possui uma lista de regras que devem ser seguidas à risca para garantir um ambiente harmonioso e respeitoso para todos. Quebrar uma delas pode resultar em punição.</p>
-    </div>
-
-    <div class="help-box">
-        <img src="support.png" alt="Suporte">
-        <p>Contamos com uma equipe dedicada e sempre atenta para garantir um ambiente seguro e agradável para todos os usuários. Estamos sempre vigiando e prontos para ajudar!</p>
-    </div>
-
-    <div class="support-box">
-        <img src="leaf.png" alt="Apoio">
-        <p>Seja um apoiador votando na nossa comunidade no site Discords.com! Ao votar, você nos ajuda a alcançar mais pessoas, trazendo alegria pra ainda mais pessoas! Tudo isso de graça!</p>
-    </div>
+    <ul>
+        <li>
+            <img src="rules.png" alt="Regras">
+            <p>Nosso servidor possui uma lista de regras que devem ser seguidas à risca para garantir um ambiente harmonioso e respeitoso para todos. Quebrar uma delas pode resultar em punição.</p>
+        </li>
+        <li>
+            <img src="support.png" alt="Suporte">
+            <p>Contamos com uma equipe dedicada e sempre atenta para garantir um ambiente seguro e agradável para todos os usuários. Estamos sempre vigiando e prontos para ajudar!</p>
+        </li>
+        <li>
+            <img src="leaf.png" alt="Apoio">
+            <p>Seja um apoiador votando na nossa comunidade no site Discords.com! Ao votar, você nos ajuda a alcançar mais pessoas, trazendo alegria pra ainda mais pessoas! Tudo isso de graça!</p>
+        </li>
+    </ul>
 
     <a href="https://discords.com/servers/1328542912283148340/upvote" class="support-button" target="_blank">Apoiar Servidor</a>
 </body>
