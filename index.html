@@ -18,24 +18,24 @@
         }
 
         body {
-            background: url('background.png') no-repeat center center fixed; /* Background fixado */
+            background: url('background.png') no-repeat center center fixed;
             background-size: cover;
-            color: white;
+            text-align: center;
             font-family: 'Outfit', sans-serif;
+            color: white;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            justify-content: flex-start;
-            align-items: center; /* Centraliza tudo na tela */
+            -webkit-filter: none !important;
+            filter: none !important;
         }
 
         .container {
-            margin-top: 10%;
-            text-align: center;
-            max-width: 600px;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 90%;
+            max-width: 600px;
         }
 
         .logo {
@@ -53,82 +53,71 @@
             font-size: 22px;
             border-radius: 8px;
             font-family: 'Outfit', sans-serif;
-            width: auto;
-            max-width: 500px;
-            box-sizing: border-box;
         }
 
         .botao:hover {
             background-color: #85a4ff;
         }
 
-        .texto-principal {
-            font-size: 18px;
-            margin-top: 20px;
-            line-height: 1.6;
-            max-width: 80%;
-            margin-left: auto;
-            margin-right: auto;
+        .rules-box, .support-box, .help-box {
+            position: absolute;
+            bottom: 110px;
+            background-color: #85a4ff;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: left;
+            color: white;
+            display: flex;
+            align-items: center;
+            font-family: 'Outfit', sans-serif;
+            width: 65%;
+            max-width: 320px;
         }
 
-        .footer {
-            margin-top: 30px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .rules-box {
+            left: 25%;
+            transform: translateX(-50%);
+        }
+
+        .help-box {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .support-box {
+            left: 75%;
+            transform: translateX(-50%);
         }
 
         .support-button {
-            margin-top: 20px;
-            padding: 12px 25px; /* Botão de Apoiar menor */
-            background-color: #82ec68; /* Cor verde */
+            position: absolute;
+            left: 75%;
+            bottom: 60px;
+            transform: translateX(-50%);
+            width: 65%;
+            max-width: 320px;
+            background-color: #82ec68;
             color: white;
             font-family: 'Outfit', sans-serif;
             text-align: center;
-            border-radius: 8px;
+            padding: 10px;
+            border-radius: 10px;
             text-decoration: none;
-            font-size: 20px; /* Menor que o botão de acessar */
+            font-size: 16px;
             display: inline-block;
-            width: auto;
-            max-width: 500px; /* Garante que os botões tenham o mesmo tamanho */
-            box-sizing: border-box;
         }
 
         .support-button:hover {
             background-color: #82ec68;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        li {
-            margin-bottom: 15px;
-            background-color: rgba(133, 164, 255, 0.8);
-            padding: 15px;
-            border-radius: 8px;
-            color: white;
-            font-family: 'Outfit', sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            width: 90%;
-            max-width: 500px;
-        }
-
-        li img {
+        .rules-box img, .support-box img, .help-box img {
             width: 30px;
             height: 30px;
             margin-right: 10px;
         }
 
-        li p {
+        .rules-box p, .support-box p, .help-box p {
             margin: 0;
             flex: 1;
             font-size: 14px;
@@ -136,40 +125,22 @@
 
         @media screen and (max-width: 768px) {
             .container {
-                margin-top: 15%;
+                top: 35%;
+                width: 95%;
             }
 
             .botao {
                 font-size: 18px;
                 padding: 12px 24px;
-                width: auto;
-                max-width: 500px;
             }
 
-            .support-button {
-                margin-top: 20px;
-                padding: 12px 25px; /* Botão de Apoiar menor */
-                background-color: #82ec68; /* Cor verde */
-                color: white;
-                font-family: 'Outfit', sans-serif;
-                text-align: center;
-                border-radius: 8px;
-                text-decoration: none;
-                font-size: 20px; /* Menor que o botão de acessar */
-                display: inline-block;
-                width: auto;
-                max-width: 500px; /* Garante que os botões tenham o mesmo tamanho */
-                box-sizing: border-box;
-            }
-
-            ul li {
-                width: 90%;
-                margin: 10px auto;
-            }
-
-            .texto-principal {
-                font-size: 16px;
-                max-width: 95%;
+            .rules-box, .support-box, .help-box, .support-button {
+                width: 75%;
+                max-width: 300px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -177,31 +148,25 @@
 <body>
     <div class="container">
         <img src="logo.png" alt="Logo" class="logo">
-        <div class="texto-principal">
-            <h2>Nosso servidor no Discord é o lugar perfeito para você interagir, jogar, ouvir música e se divertir com a comunidade!</h2>
-        </div>
+        <h2>Nosso servidor no Discord é o lugar perfeito para você interagir, jogar, ouvir música e se divertir com a comunidade!</h2>
         <a href="https://discord.gg/HSKRmw3EXx" class="botao" target="_blank">Acessar Servidor</a>
-        
-        <!-- Botão de Apoiar Servidor com o tamanho reduzido -->
-        <a href="https://discords.com/servers/1328542912283148340/upvote" class="support-button" target="_blank">Apoiar Servidor</a>
     </div>
 
-    <!-- Janelas na parte inferior -->
-    <div class="footer">
-        <ul>
-            <li>
-                <img src="rules.png" alt="Regras">
-                <p>Nosso servidor possui uma lista de regras que devem ser seguidas à risca para garantir um ambiente harmonioso e respeitoso para todos. Quebrar uma delas pode resultar em punição.</p>
-            </li>
-            <li>
-                <img src="support.png" alt="Suporte">
-                <p>Contamos com uma equipe dedicada e sempre atenta para garantir um ambiente seguro e agradável para todos os usuários. Estamos sempre vigiando e prontos para ajudar!</p>
-            </li>
-            <li>
-                <img src="leaf.png" alt="Apoio">
-                <p>Seja um apoiador votando na nossa comunidade no site Discords.com! Ao votar, você nos ajuda a alcançar mais pessoas, trazendo alegria pra ainda mais pessoas! Tudo isso de graça!</p>
-            </li>
-        </ul>
+    <div class="rules-box">
+        <img src="rules.png" alt="Regras">
+        <p>Nosso servidor possui uma lista de regras que devem ser seguidas à risca para garantir um ambiente harmonioso e respeitoso para todos. Quebrar uma delas pode resultar em punição.</p>
     </div>
+
+    <div class="help-box">
+        <img src="support.png" alt="Suporte">
+        <p>Contamos com uma equipe dedicada e sempre atenta para garantir um ambiente seguro e agradável para todos os usuários. Estamos sempre vigiando e prontos para ajudar!</p>
+    </div>
+
+    <div class="support-box">
+        <img src="leaf.png" alt="Apoio">
+        <p>Seja um apoiador votando na nossa comunidade no site Discords.com! Ao votar, você nos ajuda a alcançar mais pessoas, trazendo alegria pra ainda mais pessoas! Tudo isso de graça!</p>
+    </div>
+
+    <a href="https://discords.com/servers/1328542912283148340/upvote" class="support-button" target="_blank">Apoiar Servidor</a>
 </body>
 </html>
